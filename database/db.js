@@ -47,7 +47,7 @@ const { User } = require('./model');
         if(db === null) {
             return false;
         } else {
-            return db.apikey;
+            return db;
         }
     }
     module.exports.cekKey = cekKey;

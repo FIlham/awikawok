@@ -8,7 +8,7 @@ async function youtubePlay(req, res) {
         status: 404,
         message: `Input Parameter query & apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -31,7 +31,7 @@ async function youtubeMp3(req, res) {
         status: 404,
         message: `Input Parameter url & apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -54,7 +54,7 @@ async function youtubeMp4(req, res) {
         status: 404,
         message: `Input Parameter url & apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`

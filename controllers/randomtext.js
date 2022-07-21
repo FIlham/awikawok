@@ -7,7 +7,7 @@ async function cakLontong(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -31,7 +31,7 @@ async function quotes(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -54,7 +54,7 @@ async function fakta(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -73,7 +73,7 @@ async function bijak(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey)
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -92,7 +92,7 @@ async function ptl(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
@@ -111,7 +111,7 @@ async function motivasi(req, res) {
         status: 404,
         message: `Input Parameter apikey`
     });
-    const check = await cekKey(apikey);
+    const check = await cekKey(apikey); if (check.limit === 0) return
     if (!check) return res.status(403).send({
         status: 403,
         message: `apikey ${apikey} not found, please register first!`
