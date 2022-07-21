@@ -95,7 +95,7 @@ app.use('/users', userRouters);
 
 app.use(function (req, res, next) {
   if (res.statusCode == '200') {
-    res.render('notfound', {
+    res.render('notFound', {
       layout: 'layouts/main'
     });
   }
